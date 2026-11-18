@@ -1,17 +1,18 @@
 # Skills for Claude
 
-Almacén personal de **skills** (Claude Code / Agent Skills) para desarrollo de videojuegos en **Roblox**:
-animación, modelado 3D, UI, VFX, audio, mapas, programación y packs "todo en uno".
+Almacén personal de **skills** (Claude Code / Agent Skills) para desarrollo de videojuegos en **Roblox**
+y para trabajo general: programación, orquestación de agentes, canales de YouTube y creación de vídeo
+con código.
 
 Cada carpeta de primer nivel es una categoría y cada subcarpeta es un skill listo para copiar a
 `~/.claude/skills/` (o a `.claude/skills/` dentro de un proyecto).
 
 ## Paquetes
 
-| Paquete | Estado |
-|---|---|
-| **1. Roblox** (animación, modelado, UI, VFX, audio, mapas, programación, packs) | ✅ incluido |
-| **2. Por definir** | ⏳ pendiente |
+| Paquete | Contenido | Estado |
+|---|---|---|
+| **1. Roblox** | Animación, modelado 3D, UI, VFX, audio, mapas, programación y packs de juego | ✅ incluido |
+| **2. Desarrollo, agentes, YouTube y vídeo** | Programación, orquestación, canales de YouTube y vídeo generado con código | ✅ incluido |
 
 ## Estructura
 
@@ -19,12 +20,17 @@ Cada carpeta de primer nivel es una categoría y cada subcarpeta es un skill lis
 skills/
 ├── animacion/          R6/R15, VFX y Blender
 ├── modelado-3d/        MeshParts, texturas y arte de Blender
-├── ui/                 GUIs, HUDs y Figma → Studio
+├── ui/                 GUIs de Roblox, HUDs y Figma → Studio
+├── frontend/           Diseño visual para interfaces web
 ├── vfx/                Partículas, haces y estelas
 ├── audio/              SFX y música
 ├── mapas/              Niveles, greybox y terreno
-├── programacion/       Luau, seguridad, DataStores, rendimiento
-├── packs/              Suites completas de creación de juegos
+├── programacion/       Luau, seguridad, DataStores, rendimiento y API de Claude
+├── planificacion/      Planificación persistente basada en archivos
+├── agentes/            Orquestación de agentes y enjambres
+├── youtube/            Guiones, SEO, retención, Shorts y marketing
+├── video/              Vídeo generado con código (Canvas, Three.js, Remotion…)
+├── packs/              Suites completas (juegos, superpowers)
 └── utilidades/         Setup y comprobación de herramientas
 ```
 
@@ -58,6 +64,11 @@ Los packs traen su propio flujo de trabajo, no son un skill suelto:
   subagentes en `~/.claude/agents/`.
 - `packs/create-roblox-game/` y `packs/roblox-game-skill/`: orquestadores de ciclo completo; funcionan
   mejor con el resto de skills instalados.
+- `packs/superpowers/`: plugin de 15 skills (brainstorming, planes, TDD, revisiones, worktrees…).
+  Instálalo como plugin con `/plugin marketplace add obra/superpowers` o copia
+  `packs/superpowers/skills/*` a `~/.claude/skills/`.
+- `youtube/*/skills/` y `video/*/skills/`: skills anidados; `instalar.sh` los detecta e instala con su
+  nombre propio (`yt-script`, `xilo-opus-video`, `youtube`…).
 
 ## Requisitos habituales
 

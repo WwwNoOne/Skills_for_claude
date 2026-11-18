@@ -1,0 +1,452 @@
+{
+  "title": "Tutorial production workflow",
+  "canvas": {
+    "width": 1560,
+    "height": 1480
+  },
+  "style": {
+    "font_family": "Arial, Helvetica, sans-serif",
+    "font_size": 22,
+    "bg_color": "#F7F9FD"
+  },
+  "nodes": [
+    {
+      "id": "brief",
+      "label": "Define the brief",
+      "x": 480,
+      "y": 290,
+      "width": 340,
+      "height": 170,
+      "shape": "rounded",
+      "fill": "#FFFFFF",
+      "stroke": "#B08BFA",
+      "text_color": "#17243D",
+      "font_size": 25,
+      "band": "plan",
+      "icon": "script",
+      "lines": [
+        "Audience and learning objective",
+        "Tutorial or launch film",
+        "Duration, format and visual style"
+      ],
+      "file": "BRIEF.md"
+    },
+    {
+      "id": "script",
+      "label": "Write the script",
+      "x": 880,
+      "y": 290,
+      "width": 340,
+      "height": 170,
+      "shape": "rounded",
+      "fill": "#FFFFFF",
+      "stroke": "#B08BFA",
+      "text_color": "#17243D",
+      "font_size": 25,
+      "band": "plan",
+      "icon": "script",
+      "lines": [
+        "Narration + on-screen commands",
+        "Scene structure and reading time",
+        "Concept, beats and transitions"
+      ],
+      "file": "voiceover.txt / TREATMENT.md"
+    },
+    {
+      "id": "approval",
+      "label": "Approve the script",
+      "x": 1280,
+      "y": 290,
+      "width": 340,
+      "height": 170,
+      "shape": "rounded",
+      "fill": "#FFFFFF",
+      "stroke": "#B08BFA",
+      "text_color": "#17243D",
+      "font_size": 25,
+      "band": "plan",
+      "icon": "check",
+      "lines": [
+        "Review wording and factual claims",
+        "Check commands and requirements",
+        "Confirm before building scenes"
+      ],
+      "file": "Script review"
+    },
+    {
+      "id": "voice",
+      "label": "Prepare the voice",
+      "x": 480,
+      "y": 575,
+      "width": 340,
+      "height": 170,
+      "shape": "rounded",
+      "fill": "#FFFFFF",
+      "stroke": "#24B8D0",
+      "text_color": "#17243D",
+      "font_size": 25,
+      "band": "voice",
+      "icon": "voice",
+      "lines": [
+        "Draft TTS or recorded takes",
+        "Measure speech before retiming",
+        "Preserve the original recordings"
+      ],
+      "file": "audio/vo/vo_SXX.wav"
+    },
+    {
+      "id": "words",
+      "label": "Align words and scenes",
+      "x": 880,
+      "y": 575,
+      "width": 340,
+      "height": 170,
+      "shape": "rounded",
+      "fill": "#FFFFFF",
+      "stroke": "#24B8D0",
+      "text_color": "#17243D",
+      "font_size": 25,
+      "band": "voice",
+      "icon": "timing",
+      "lines": [
+        "Word boundaries for draft TTS",
+        "Estimated timing for recordings",
+        "Scene length follows speech"
+      ],
+      "file": "src/generated/vo.json"
+    },
+    {
+      "id": "timeline",
+      "label": "Shared timeline",
+      "x": 1280,
+      "y": 575,
+      "width": 340,
+      "height": 170,
+      "shape": "rounded",
+      "fill": "#FFFFFF",
+      "stroke": "#24B8D0",
+      "text_color": "#17243D",
+      "font_size": 25,
+      "band": "voice",
+      "icon": "timing",
+      "lines": [
+        "Spoken-word cues + beat grid",
+        "Clamp cues to scene boundaries",
+        "Keep the musical drop on a bar"
+      ],
+      "file": "src/timeline.ts"
+    },
+    {
+      "id": "picture",
+      "label": "Picture and motion",
+      "x": 480,
+      "y": 925,
+      "width": 340,
+      "height": 240,
+      "shape": "rounded",
+      "fill": "#FFFFFF",
+      "stroke": "#ECA045",
+      "text_color": "#17243D",
+      "font_size": 25,
+      "band": "compose",
+      "icon": "terminal",
+      "lines": [
+        "React / Remotion scenes",
+        "Glass terminals + syntax color",
+        "Readable commands and step chips",
+        "Camera moves + motion blur",
+        "Real footage or labeled mockups"
+      ],
+      "file": "Film.tsx / scenes/ / tokens.ts"
+    },
+    {
+      "id": "presenter",
+      "label": "Captions and presenter",
+      "x": 880,
+      "y": 925,
+      "width": 340,
+      "height": 240,
+      "shape": "rounded",
+      "fill": "#FFFFFF",
+      "stroke": "#ECA045",
+      "text_color": "#17243D",
+      "font_size": 25,
+      "band": "compose",
+      "icon": "mascot",
+      "lines": [
+        "Word-highlighted captions",
+        "Optional original mascot",
+        "7 visemes + blink / typing states",
+        "Gesture in-betweens + hop moves",
+        "Opaque sprite compositing"
+      ],
+      "file": "Captions.tsx / Mascot.tsx"
+    },
+    {
+      "id": "sound",
+      "label": "Soundtrack and effects",
+      "x": 1280,
+      "y": 925,
+      "width": 340,
+      "height": 240,
+      "shape": "rounded",
+      "fill": "#FFFFFF",
+      "stroke": "#ECA045",
+      "text_color": "#17243D",
+      "font_size": 25,
+      "band": "compose",
+      "icon": "music",
+      "lines": [
+        "Voiceover + synthesized score",
+        "Cue-aligned sound effects",
+        "Shared events for picture + sound",
+        "Music and speech balance",
+        "Mastering and measured loudness"
+      ],
+      "file": "events.ts / soundtrack.py"
+    },
+    {
+      "id": "render",
+      "label": "Render and assemble",
+      "x": 480,
+      "y": 1255,
+      "width": 340,
+      "height": 180,
+      "shape": "rounded",
+      "fill": "#FFFFFF",
+      "stroke": "#35BD91",
+      "text_color": "#17243D",
+      "font_size": 25,
+      "band": "finish",
+      "icon": "render",
+      "lines": [
+        "Preview and inspect key frames",
+        "Render heavy scenes separately",
+        "Concatenate and mux the audio"
+      ],
+      "file": "render_segments.sh"
+    },
+    {
+      "id": "qa",
+      "label": "Measure and review",
+      "x": 880,
+      "y": 1255,
+      "width": 340,
+      "height": 180,
+      "shape": "rounded",
+      "fill": "#FFFFFF",
+      "stroke": "#35BD91",
+      "text_color": "#17243D",
+      "font_size": 25,
+      "band": "finish",
+      "icon": "check",
+      "lines": [
+        "Frozen runs + scene contact sheets",
+        "Frame count and cut alignment",
+        "−14 LUFS · true peak ≤ −1 dBTP"
+      ],
+      "file": "check_static.py / ffprobe"
+    },
+    {
+      "id": "deliver",
+      "label": "Deliver the video",
+      "x": 1280,
+      "y": 1255,
+      "width": 340,
+      "height": 180,
+      "shape": "rounded",
+      "fill": "#FFFFFF",
+      "stroke": "#35BD91",
+      "text_color": "#17243D",
+      "font_size": 25,
+      "band": "finish",
+      "icon": "render",
+      "lines": [
+        "MP4 + editable project files",
+        "QA results and measured timings",
+        "Voice, asset and upstream credits"
+      ],
+      "file": "Master + source + QA"
+    }
+  ],
+  "edges": [
+    {
+      "from": "brief",
+      "to": "script",
+      "path": "M650 290 H704",
+      "color": "#8895AD",
+      "style": "solid",
+      "thickness": 2
+    },
+    {
+      "from": "script",
+      "to": "approval",
+      "path": "M1050 290 H1104",
+      "color": "#8895AD",
+      "style": "solid",
+      "thickness": 2
+    },
+    {
+      "from": "approval",
+      "to": "voice",
+      "path": "M1280 375 V430 H480 V484",
+      "color": "#8895AD",
+      "style": "solid",
+      "thickness": 2,
+      "label": "Approved narration",
+      "label_x": 880,
+      "label_y": 430
+    },
+    {
+      "from": "voice",
+      "to": "words",
+      "path": "M650 575 H704",
+      "color": "#8895AD",
+      "style": "solid",
+      "thickness": 2
+    },
+    {
+      "from": "words",
+      "to": "timeline",
+      "path": "M1050 575 H1104",
+      "color": "#8895AD",
+      "style": "solid",
+      "thickness": 2
+    },
+    {
+      "from": "timeline",
+      "to": "picture",
+      "path": "M1280 660 V730 H480 V799",
+      "color": "#24B8D0",
+      "style": "solid",
+      "thickness": 2
+    },
+    {
+      "from": "timeline",
+      "to": "presenter",
+      "path": "M1280 660 V730 H880 V799",
+      "color": "#24B8D0",
+      "style": "solid",
+      "thickness": 2
+    },
+    {
+      "from": "timeline",
+      "to": "sound",
+      "path": "M1280 660 V730 H1280 V799",
+      "color": "#24B8D0",
+      "style": "solid",
+      "thickness": 2
+    },
+    {
+      "from": "picture",
+      "to": "render",
+      "path": "M480 1045 V1100 H480 V1159",
+      "color": "#ECA045",
+      "style": "solid",
+      "thickness": 2
+    },
+    {
+      "from": "presenter",
+      "to": "render",
+      "path": "M880 1045 V1100 H480 V1159",
+      "color": "#ECA045",
+      "style": "solid",
+      "thickness": 2
+    },
+    {
+      "from": "sound",
+      "to": "render",
+      "path": "M1280 1045 V1100 H480 V1159",
+      "color": "#ECA045",
+      "style": "solid",
+      "thickness": 2
+    },
+    {
+      "from": "render",
+      "to": "qa",
+      "path": "M650 1255 H704",
+      "color": "#8895AD",
+      "style": "solid",
+      "thickness": 2
+    },
+    {
+      "from": "qa",
+      "to": "deliver",
+      "path": "M1050 1255 H1104",
+      "color": "#35BD91",
+      "style": "solid",
+      "thickness": 2,
+      "label": "Pass",
+      "label_x": 1080,
+      "label_y": 1233
+    },
+    {
+      "from": "qa",
+      "to": "timeline",
+      "path": "M880 1345 V1410 H1500 V575 H1456",
+      "color": "#D1749C",
+      "style": "dashed",
+      "thickness": 2
+    }
+  ],
+  "groups": [],
+  "labels": [],
+  "bands": [
+    {
+      "id": "plan",
+      "number": "01",
+      "title": [
+        "Plan"
+      ],
+      "subtitle": [
+        "Define the outcome.",
+        "Approve the words."
+      ],
+      "y": 185,
+      "height": 215,
+      "color": "#B08BFA"
+    },
+    {
+      "id": "voice",
+      "number": "02",
+      "title": [
+        "Time"
+      ],
+      "subtitle": [
+        "Measure the voice.",
+        "Derive the cues."
+      ],
+      "y": 460,
+      "height": 230,
+      "color": "#24B8D0"
+    },
+    {
+      "id": "compose",
+      "number": "03",
+      "title": [
+        "Compose"
+      ],
+      "subtitle": [
+        "Three channels.",
+        "One shared timeline."
+      ],
+      "y": 775,
+      "height": 300,
+      "color": "#ECA045"
+    },
+    {
+      "id": "finish",
+      "number": "04",
+      "title": [
+        "Verify"
+      ],
+      "subtitle": [
+        "Inspect the render.",
+        "Report the evidence."
+      ],
+      "y": 1140,
+      "height": 230,
+      "color": "#35BD91"
+    }
+  ]
+}

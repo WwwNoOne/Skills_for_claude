@@ -59,8 +59,46 @@
 | `programacion/roblox-remote-events` | Comunicación cliente-servidor: RemoteEvents/RemoteFunctions, sincronización de estado y defensa frente a su abuso. | sentinelcore/roblox-skills |
 | `programacion/roblox-performance` | Rendimiento: FPS, streaming, draw calls, object pooling, LOD, MicroProfiler y mundos grandes. | sentinelcore/roblox-skills |
 | `programacion/roblox-monetization` | Monetización: Game Passes, Developer Products, UGC y Premium Payouts, tanto en scripting como en el dashboard de Creator Hub. | sentinelcore/roblox-skills |
+| `programacion/claude-api` | Referencia completa de la API de Claude / SDK de Anthropic: ids de modelo, precios, parámetros, streaming, tool use, MCP, agentes, caching, conteo de tokens y migración de modelos. | anthropics/skills |
 
-## 📦 Packs "todo en uno"
+## 🎨 Frontend
+
+| Skill | Qué hace | Origen |
+|---|---|---|
+| `frontend/frontend-design` | Skill oficial de Anthropic para generar interfaces con una dirección estética y tipográfica definida, evitando el aspecto genérico y repetitivo de la IA. | anthropics/skills |
+
+## 🗂️ Planificación
+
+| Skill | Qué hace | Origen |
+|---|---|---|
+| `planificacion/planning-with-files` | Bucle de planificación persistente en disco (`task_plan.md`, `findings.md`, `progress.md`) con hooks de ciclo de vida y recuperación automática; pensado para tareas largas y refactorizaciones multiarchivo. | OthmanAdi/planning-with-files |
+
+## 🤖 Agentes y orquestación
+
+| Skill | Qué hace | Origen |
+|---|---|---|
+| `agentes/orchestrating-chat-agents` | Reparte trabajo de Claude en paralelo por la API de Anthropic: contexto compartido en caché, streaming, hilos de conversación largos y pools de agentes con nombre. Útil para análisis paralelos y revisiones con múltiples perspectivas. | oaustegard/claude-skills |
+| `agentes/swarm-orchestration` | Orquesta "enjambres" de agentes con agentic-flow: ejecución paralela, topologías dinámicas y coordinación inteligente, con scripts de arranque y monitorización. | ruvnet/ruflo (`@claude-flow/cli`) |
+
+> El skill `orchestrating-agents` que pediste fue renombrado aguas arriba a `orchestrating-chat-agents`;
+> se incluye la versión mantenida.
+
+## 📺 YouTube
+
+| Skill | Qué hace | Origen |
+|---|---|---|
+| `youtube/youtube-agent-skills` | Pack de 11 skills (`yt-*`) para operar un canal: guiones con ganchos puntuados, SEO, retención, planificación semanal, Shorts, auditoría, capítulos, comentarios, edición, empaquetado y análisis de lo viral. | BEHA-AF/youtube-agent-skills |
+| `youtube/youtube-marketing-skills` | Toolkit de crecimiento con 21 comandos, agentes especializados y un servidor MCP conectado a la API de YouTube: analíticas, títulos/descripciones/etiquetas, actualizaciones masivas y campañas de email. | adityaarsharma/youtube-marketing-skills |
+
+## 🎬 Vídeo con código
+
+| Skill | Qué hace | Origen |
+|---|---|---|
+| `video/xilo-opus-video` | Crea vídeos escribiendo código (Canvas/HTML/CSS/SVG, WebGL, Three.js, Remotion, Manim): propone tres ideas con keyframes, y tras confirmar renderiza frame a frame con Playwright y FFmpeg. | Kianzzz/xilo-opus-video |
+| `video/claude-awesome-video-creation` | Vídeos tutoriales y explicativos "follow-along": guion, voz, música, subtítulos y una mascota con lip-sync, sincronizados en una línea de tiempo basada en la voz. | HaochenSHI66/claude-awesome-video-creation |
+| `video/code-video` | Investiga un tema y renderiza un vídeo promocional en MP4 con estilos visuales concretos (dibujado a mano, 8-bit y otros). | Changroro/code-video |
+
+## 📦 Packs
 
 | Pack | Qué incluye | Origen |
 |---|---|---|
@@ -68,6 +106,7 @@
 | `packs/roblox-game-skill` | Skill de ciclo de vida completo: workflows, referencias profundas de animación/VFX y sistemas GUI, plantillas y documentación de juego. | brockmartin/roblox-game-skill |
 | `packs/create-roblox-game` | Lleva un juego de "género" a construido, jugable y publicado, una sección por sesión, con `HANDOFF.md` entre sesiones para no perder contexto. | SyphoDev-yt/roblox-ai-skills |
 | `packs/roblox-build-orchestrator` | Ejecuta el pipeline como una run temporizada y logueada (investigación, diseño, código, arte, ensamblaje, playtest, publicación) repartiendo el bloque de assets a subagentes. Incluye `agents/`. | SyphoDev-yt/roblox-ai-skills |
+| `packs/superpowers` | Suite de 15 skills de desarrollo: brainstorming antes de crear, planes escritos, TDD, depuración sistemática, revisiones de código, worktrees de git, agentes en paralelo y verificación antes de dar algo por terminado. | obra/superpowers |
 
 ## 🛠️ Utilidades
 

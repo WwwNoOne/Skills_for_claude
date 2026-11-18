@@ -55,4 +55,4 @@ done < <(find "$RAIZ/skills" -name SKILL.md -not -path '*/node_modules/*' | sort
 
 echo
 echo "Instalados: $instalados · Omitidos: $omitidos · Destino: $DESTINO"
-echo "Los packs sin SKILL.md en la raíz (claude-roblox-game-studio, openrig-studio) se instalan a mano; ver README.md."
+echo "Los packs sin SKILL.md en la raíz (claude-roblox-game-studio, superpowers, openrig-studio) se instalan a mano; ver README.md."
