@@ -86,8 +86,8 @@ Para ver contexto, tokens y cuota restante (5h / 7d) de los agentes que corren e
 ./herdr/instalar-metricas-herdr.sh
 ```
 
-Instala y configura el plugin `herdr-agent-usage`, añade las filas de cuota a la barra lateral y el
-atajo `prefix+shift+m` para abrir el panel. Detalles en [herdr/README.md](herdr/README.md).
+Instala el recolector (`herdr-agent-usage`), un panel propio y los atajos `Ctrl+Shift+M`
+(escritorio) y `prefix+shift+m` (TUI). Detalles en [herdr/README.md](herdr/README.md).
 
 ### Packs
 
