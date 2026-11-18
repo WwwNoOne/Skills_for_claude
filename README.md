@@ -78,6 +78,17 @@ Notas:
 - Los packs con `CLAUDE.md` (CodePhobiia) siguen funcionando en Codex, pero sus flujos `team-*` y
   `wiki-*` están escritos para Claude; el resto de skills son independientes del agente.
 
+## Métricas en Herdr
+
+Para ver contexto, tokens y cuota restante (5h / 7d) de los agentes que corren en Herdr:
+
+```bash
+./herdr/instalar-metricas-herdr.sh
+```
+
+Instala y configura el plugin `herdr-agent-usage`, añade las filas de cuota a la barra lateral y el
+atajo `prefix+shift+m` para abrir el panel. Detalles en [herdr/README.md](herdr/README.md).
+
 ### Packs
 
 Los packs traen su propio flujo de trabajo, no son un skill suelto:
