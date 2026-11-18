@@ -1,0 +1,14 @@
+# Configuración local generada por los skills de setup (rutas de tu máquina)
+LOCAL.md
+**/LOCAL.md
+
+# Entornos y cachés
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Sistema
+.DS_Store
+Thumbs.db

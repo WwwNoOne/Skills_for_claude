@@ -1,0 +1,148 @@
+// UI strings in English and German. t('key', { var }) fills {var} placeholders.
+const STRINGS = {
+  en: {
+    'tab.editor': 'Editor', 'tab.library': 'Library', 'tab.compare': 'Compare', 'tab.settings': 'Settings',
+    'studio.none': 'No Studio connected', 'studio.searching': 'Looking for Studio…', 'studio.unavailable': 'Studio MCP not found', 'studio.refresh': 'Find open Studio windows',
+    'director': 'Director', 'engine.provider': 'Provider', 'engine.model': 'Model', 'engine.effort': 'Effort', 'engine.default': 'Default',
+    'engine.custom': 'Other model id…', 'engine.customPlaceholder': 'Model id', 'engine.unavailable': '{provider} is not set up yet. Open Settings to connect it.',
+    'empty.title': 'Describe a motion.', 'empty.body': 'Say what happens, the mood and the pace. Or start from one of these:',
+    'composer.placeholder': 'Describe the motion… (Enter sends, Shift+Enter for a new line)', 'composer.review': 'Visual review',
+    'composer.reviewHint': 'Second pass: the model sees its draft as a contact sheet and fixes what it spots. Takes about twice as long.',
+    'composer.improve': 'Improve', 'composer.send': 'Generate',
+    'mode.improve': 'Improve', 'job.start': 'Starting…', 'job.stop': 'Stop', 'job.stopped': 'Generation stopped.', 'job.draft': '{engine} is writing a draft…', 'job.retry': 'The answer had no animation, asking again…', 'job.review': 'Visual review: {engine} checks the contact sheet…',
+    'msg.plan': 'Plan', 'msg.findings': '{n} findings', 'msg.findings.one': '1 finding', 'msg.fixes': 'Automatic fixes', 'msg.reviewed': 'Visual review applied', 'msg.reviewKept': 'Visual review not used: {reason}',
+    'msg.reviewWorse': 'it had more findings', 'msg.reviewNoJson': 'no readable answer', 'msg.reviewError': 'request failed', 'msg.reviewNoImages': 'this model cannot see images',
+    'msg.restoreDraft': 'Use the draft instead', 'msg.tokens': '{in} in, {out} out', 'msg.thinking': '{n} reasoning',
+    'clip.untitled': 'New animation', 'clip.keys': '{n} keys', 'clip.keys.one': '1 key', 'clip.events': '{n} events', 'clip.events.one': '1 event', 'clip.loop': 'Loop', 'clip.rename': 'Rename',
+    'viewport.hint': 'Click a body part to edit it. Drag to orbit, scroll to zoom.',
+    'transport.play': 'Play (Space)', 'transport.pause': 'Pause (Space)', 'transport.start': 'Go to start', 'transport.end': 'Go to end', 'transport.loop': 'Repeat playback',
+    'lower.dope': 'Dope sheet', 'lower.frames': 'Frames', 'lower.history': 'History', 'lower.events': 'Events', 'lower.time': 'Time',
+    'frames.hint': 'Every frame the model sees during visual review. Click a frame to jump there.',
+    'history.created': 'Created', 'history.generated': 'Generated', 'history.draft': 'Draft before visual review', 'history.edited': 'Edited by hand',
+    'history.imported': 'Imported from Studio', 'history.restored': 'Restored', 'history.retargeted': 'Moved to another rig', 'history.current': 'Current', 'history.restore': 'Restore', 'history.frames': 'Frames', 'history.findings': '{n} findings', 'history.findings.one': '1 finding',
+    'insp.joint': 'Joint', 'insp.noJoint': 'Click a body part in the viewport or a row in the dope sheet.', 'insp.atKey': 'Key at {t} s', 'insp.between': 'Between keys, {t} s',
+    'insp.addKey': 'Add key here', 'insp.removeKey': 'Remove key', 'insp.easing': 'Easing', 'insp.position': 'Position', 'insp.rotation': 'Rotation',
+    'insp.keyframe': 'Keyframe', 'insp.time': 'Time', 'insp.air': 'In the air (both feet off the ground)', 'insp.deleteKeyframe': 'Delete keyframe',
+    'insp.clip': 'Clip', 'insp.priority': 'Priority', 'insp.rig': 'Rig', 'insp.rigDefault': 'Default R15', 'insp.rigImport': 'Import selected rig from Studio…', 'insp.rigHint': 'The body this clip is made for. Choosing another R15 rig fits the current version to its proportions: root motion scales, feet stay planted and on the ground. R6 can only be chosen for an empty clip.', 'insp.addEvent': 'Add event at {t} s', 'insp.groundNote': 'Body height is set on save so the feet touch the ground, except for keys in the air.',
+    'insp.unsaved': 'Unsaved changes', 'insp.save': 'Save', 'insp.discard': 'Discard',
+    'ease.InOut': 'Smooth (InOut)', 'ease.Out': 'Fast start (Out)', 'ease.In': 'Fast end (In)', 'ease.Linear': 'Linear', 'ease.Constant': 'Step (Constant)',
+    'actions.studio': 'Studio', 'actions.export': 'Export', 'actions.push': 'Send to Studio', 'actions.pushHint': 'Saves it for the Animation Editor and places a preview rig',
+    'actions.preview': 'Play in Studio', 'actions.previewHint': 'Plays on the preview rig in edit mode', 'actions.playtest': 'Play on my avatar', 'actions.playtestHint': 'Needs a running playtest (F5)',
+    'actions.pull': 'Import from Studio', 'actions.pullHint': 'Takes a version edited in the Animation Editor', 'actions.rbxmx': 'Download .rbxmx', 'actions.luau': 'Copy Luau builder',
+    'actions.duplicate': 'Duplicate', 'actions.delete': 'Delete',
+    'actions.undo': 'Undo (Ctrl+Z)', 'actions.redo': 'Redo (Ctrl+Shift+Z)',
+    'done.push': 'Sent to Studio: {msg}', 'done.preview': 'Played in Studio ({msg})', 'done.playtest': 'Playing on {msg}', 'done.luau': 'Luau copied. Paste it in Studio\'s command bar.', 'done.saved': 'Saved',
+    'done.restored': 'Restored', 'rig.importing': 'Reading the selected rig from Studio…', 'rig.switched': 'Now fitted to {rig}', 'done.imported': 'Imported from Studio', 'done.deleted': '{n} deleted', 'done.moved': 'Moved {n} clips', 'done.moved.one': 'Moved 1 clip', 'done.renamed': 'Renamed',
+    'err.selectStudio': 'Choose a Studio window first (top right).', 'err.saveFirst': 'Save or discard your changes first.', 'err.busy': 'This clip is generating. Wait until it finishes.',
+    'pull.title': 'Import from Studio', 'pull.body': 'Animations in ServerStorage › RBX_ANIMSAVES, where the Animation Editor saves. The one you choose becomes the newest version of this clip.', 'pull.none': 'No saved animations found.', 'pull.keys': '{n} keyframes', 'pull.keys.one': '1 keyframe',
+    'dialog.cancel': 'Cancel', 'dialog.close': 'Close', 'dialog.delete': 'Delete', 'dialog.confirmDelete': 'Delete {n} clip(s)? They move to data/trash and can be restored from there.',
+    'lib.all': 'All clips', 'lib.starred': 'Starred', 'lib.unsorted': 'No folder', 'lib.newFolder': 'New folder', 'lib.folderName': 'Folder name', 'lib.renameFolder': 'Rename folder', 'lib.deleteFolder': 'Remove folder',
+    'lib.deleteFolderConfirm': 'Remove the folder "{name}"? Its clips stay in the library without a folder.',
+    'lib.search': 'Search clips', 'lib.new': 'New clip', 'lib.selected': '{n} selected', 'lib.open': 'Open', 'lib.moveTo': 'Move to…', 'lib.toStudio': 'Send to Studio', 'lib.export': 'Export .rbxmx', 'lib.clear': 'Clear selection',
+    'lib.col.name': 'Name', 'lib.col.folder': 'Folder', 'lib.col.length': 'Length', 'lib.col.model': 'Generated with', 'lib.col.updated': 'Updated',
+    'lib.empty': 'Nothing here yet.', 'lib.emptyBody': 'Generate a clip in the editor, or compare models on the same prompt.', 'lib.noMatch': 'No clips match your search.',
+    'cmp.title': 'Compare models', 'cmp.body': 'One prompt, several models. Every result is saved as a clip in the folder "Comparisons".',
+    'cmp.preset': 'Preset', 'cmp.custom': 'Own prompt', 'cmp.prompt': 'Prompt', 'cmp.models': 'Models', 'cmp.start': 'Start comparison', 'cmp.history': 'Earlier comparisons',
+    'cmp.sync': 'All results play in sync.', 'cmp.empty': 'No comparison yet.', 'cmp.emptyBody': 'Pick a preset, choose models and start. Results appear here side by side and play in sync.',
+    'cmp.running': 'Working… {s} s', 'cmp.failed': 'Failed: {error}', 'cmp.interrupted': 'Interrupted (the server restarted).', 'cmp.open': 'Open in editor', 'cmp.frames': 'Frames', 'cmp.stage': '3D',
+    'cmp.stats': '{s} s · {keys} keys · {len} s long', 'cmp.notSetUp': 'not set up',
+    'set.title': 'Settings', 'set.providers': 'AI providers', 'set.providersBody': 'Use the subscriptions you already have through their command line tools, or API keys. Keys are stored only in data/settings.json on this computer.',
+    'set.subscription': 'Subscription', 'set.api': 'API key', 'set.ready': 'Ready', 'set.notFound': 'Not found', 'set.noKey': 'No key', 'set.noUrl': 'No base URL', 'set.test': 'Test connection', 'set.save': 'Save', 'set.saved': 'Saved',
+    'set.claudeHow': 'Install Claude Code, then run {cmd} once in a terminal and log in with your Claude subscription.',
+    'set.codexHow': 'Install the Codex CLI, then run {cmd} once in a terminal and log in with your ChatGPT subscription.',
+    'set.anthropicHow': 'Create a key at console.anthropic.com. Billed per token by Anthropic.', 'set.openaiHow': 'Create a key at platform.openai.com. Billed per token by OpenAI.',
+    'set.compatibleHow': 'Any API in the OpenAI Chat Completions format: DeepSeek, Qwen, Kimi, GLM, OpenRouter, or local models through Ollama or LM Studio. Enter the base URL (ending in /v1 for most), a key if the server needs one and the model ids. Billed by that provider.',
+    'set.compatUrl': 'Base URL, e.g. https://api.deepseek.com/v1 or http://localhost:11434/v1', 'set.compatModels': 'Model ids (comma separated)',
+    'set.compatMaxTokens': 'Max output tokens (optional, e.g. 16000)', 'set.compatImages': 'The models can see images (needed for visual review)',
+    'set.keyPlaceholder': 'Paste a key to replace the stored one', 'set.openaiModels': 'Extra OpenAI model ids (comma separated)',
+    'set.path': 'Custom path (optional)', 'set.studio': 'Roblox Studio', 'set.studioBody': 'OpenRig talks to Studio through the MCP server built into Roblox Studio. Keep the place open; the connection is picked in the top bar.',
+    'set.studioFound': 'Found: {path}', 'set.studioMissing': 'Studio\'s MCP server was not found. Set the path to StudioMCP if Studio is installed somewhere else.',
+    'set.rigs': 'Rigs', 'set.rigsBody': 'Bodies with other proportions than the default R15 rig, e.g. your avatar. Import one in the editor under Clip › Rig while it is selected in Studio (Avatar › Rig Builder › My Avatar inserts yours).', 'set.rigsNone': 'No rigs imported yet.', 'set.rigName': 'Name', 'set.rigDelete': 'Delete', 'set.rigDeleted': 'Rig deleted. Clips made for it now show the default body.',
+    'set.style': 'Project style', 'set.styleBody': 'Optional notes added to every request, e.g. "cozy and bouncy, never aggressive".', 'set.language': 'Language',
+    'time.now': 'just now', 'time.min': '{n} min ago', 'time.hour': '{n} h ago', 'time.day': '{n} d ago',
+  },
+  de: {
+    'tab.editor': 'Editor', 'tab.library': 'Bibliothek', 'tab.compare': 'Vergleich', 'tab.settings': 'Einstellungen',
+    'studio.none': 'Kein Studio verbunden', 'studio.searching': 'Suche Studio…', 'studio.unavailable': 'Studio-MCP nicht gefunden', 'studio.refresh': 'Offene Studio-Fenster suchen',
+    'director': 'Regie', 'engine.provider': 'Anbieter', 'engine.model': 'Modell', 'engine.effort': 'Effort', 'engine.default': 'Standard',
+    'engine.custom': 'Andere Modell-ID…', 'engine.customPlaceholder': 'Modell-ID', 'engine.unavailable': '{provider} ist noch nicht eingerichtet. In den Einstellungen verbinden.',
+    'empty.title': 'Beschreib eine Bewegung.', 'empty.body': 'Was passiert, welche Stimmung, welches Tempo. Oder starte mit einer Vorlage:',
+    'composer.placeholder': 'Bewegung beschreiben… (Enter sendet, Shift+Enter neue Zeile)', 'composer.review': 'Bildkontrolle',
+    'composer.reviewHint': 'Zweiter Durchgang: Das Modell sieht seinen Entwurf als Kontaktbogen und bessert nach. Dauert etwa doppelt so lange.',
+    'composer.improve': 'Verbessern', 'composer.send': 'Erzeugen',
+    'mode.improve': 'Verbessern', 'job.start': 'Starte…', 'job.stop': 'Stopp', 'job.stopped': 'Generierung gestoppt.', 'job.draft': '{engine} schreibt einen Entwurf…', 'job.retry': 'Die Antwort enthielt keine Animation, frage nach…', 'job.review': 'Bildkontrolle: {engine} prüft den Kontaktbogen…',
+    'msg.plan': 'Plan', 'msg.findings': '{n} Hinweise', 'msg.findings.one': '1 Hinweis', 'msg.fixes': 'Automatische Korrekturen', 'msg.reviewed': 'Bildkontrolle übernommen', 'msg.reviewKept': 'Bildkontrolle nicht übernommen: {reason}',
+    'msg.reviewWorse': 'mehr Hinweise als der Entwurf', 'msg.reviewNoJson': 'keine lesbare Antwort', 'msg.reviewError': 'Anfrage fehlgeschlagen', 'msg.reviewNoImages': 'dieses Modell kann keine Bilder sehen',
+    'msg.restoreDraft': 'Lieber den Entwurf nehmen', 'msg.tokens': '{in} rein, {out} raus', 'msg.thinking': '{n} Denken',
+    'clip.untitled': 'Neue Animation', 'clip.keys': '{n} Keys', 'clip.keys.one': '1 Key', 'clip.events': '{n} Events', 'clip.events.one': '1 Event', 'clip.loop': 'Loop', 'clip.rename': 'Umbenennen',
+    'viewport.hint': 'Körperteil anklicken zum Bearbeiten. Ziehen dreht, Mausrad zoomt.',
+    'transport.play': 'Abspielen (Leertaste)', 'transport.pause': 'Pause (Leertaste)', 'transport.start': 'Zum Anfang', 'transport.end': 'Zum Ende', 'transport.loop': 'Wiederholen',
+    'lower.dope': 'Dopesheet', 'lower.frames': 'Einzelbilder', 'lower.history': 'Verlauf', 'lower.events': 'Events', 'lower.time': 'Zeit',
+    'frames.hint': 'Genau diese Bilder sieht das Modell bei der Bildkontrolle. Klick auf ein Bild springt dorthin.',
+    'history.created': 'Angelegt', 'history.generated': 'Erzeugt', 'history.draft': 'Entwurf vor der Bildkontrolle', 'history.edited': 'Von Hand bearbeitet',
+    'history.imported': 'Aus Studio übernommen', 'history.restored': 'Wiederhergestellt', 'history.retargeted': 'Auf anderes Rig übertragen', 'history.current': 'Aktuell', 'history.restore': 'Wiederherstellen', 'history.frames': 'Einzelbilder', 'history.findings': '{n} Hinweise', 'history.findings.one': '1 Hinweis',
+    'insp.joint': 'Gelenk', 'insp.noJoint': 'Klick ein Körperteil in der 3D-Ansicht oder eine Zeile im Dopesheet an.', 'insp.atKey': 'Key bei {t} s', 'insp.between': 'Zwischen Keys, {t} s',
+    'insp.addKey': 'Key hier setzen', 'insp.removeKey': 'Key entfernen', 'insp.easing': 'Easing', 'insp.position': 'Position', 'insp.rotation': 'Drehung',
+    'insp.keyframe': 'Keyframe', 'insp.time': 'Zeit', 'insp.air': 'In der Luft (beide Füße frei)', 'insp.deleteKeyframe': 'Keyframe löschen',
+    'insp.clip': 'Clip', 'insp.priority': 'Priorität', 'insp.rig': 'Rig', 'insp.rigDefault': 'Standard-R15', 'insp.rigImport': 'Ausgewähltes Rig aus Studio übernehmen…', 'insp.rigHint': 'Der Körper, für den dieser Clip gemacht ist. Ein anderes R15-Rig passt die aktuelle Version an seine Proportionen an: Root-Bewegung skaliert, Füße bleiben stehen und auf dem Boden. R6 lässt sich nur für einen leeren Clip wählen.', 'insp.addEvent': 'Event bei {t} s', 'insp.groundNote': 'Die Körperhöhe wird beim Speichern so gesetzt, dass die Füße den Boden berühren, außer bei Luft-Keys.',
+    'insp.unsaved': 'Ungespeicherte Änderungen', 'insp.save': 'Speichern', 'insp.discard': 'Verwerfen',
+    'ease.InOut': 'Weich (InOut)', 'ease.Out': 'Schneller Start (Out)', 'ease.In': 'Schnelles Ende (In)', 'ease.Linear': 'Gleichmäßig', 'ease.Constant': 'Sprung (Constant)',
+    'actions.studio': 'Studio', 'actions.export': 'Export', 'actions.push': 'An Studio senden', 'actions.pushHint': 'Speichert für den Animation Editor und stellt eine Vorschau-Figur auf',
+    'actions.preview': 'In Studio abspielen', 'actions.previewHint': 'Spielt auf der Vorschau-Figur im Bearbeitungsmodus', 'actions.playtest': 'Auf meinem Avatar abspielen', 'actions.playtestHint': 'Braucht einen laufenden Playtest (F5)',
+    'actions.pull': 'Aus Studio übernehmen', 'actions.pullHint': 'Holt eine im Animation Editor bearbeitete Fassung', 'actions.rbxmx': '.rbxmx herunterladen', 'actions.luau': 'Luau-Builder kopieren',
+    'actions.duplicate': 'Duplizieren', 'actions.delete': 'Löschen',
+    'actions.undo': 'Rückgängig (Strg+Z)', 'actions.redo': 'Wiederholen (Strg+Umschalt+Z)',
+    'done.push': 'An Studio gesendet: {msg}', 'done.preview': 'In Studio abgespielt ({msg})', 'done.playtest': 'Läuft auf {msg}', 'done.luau': 'Luau kopiert. In Studios Befehlszeile einfügen.', 'done.saved': 'Gespeichert',
+    'done.restored': 'Wiederhergestellt', 'rig.importing': 'Lese das ausgewählte Rig aus Studio…', 'rig.switched': 'Jetzt angepasst an {rig}', 'done.imported': 'Aus Studio übernommen', 'done.deleted': '{n} gelöscht', 'done.moved': '{n} Clips verschoben', 'done.moved.one': '1 Clip verschoben', 'done.renamed': 'Umbenannt',
+    'err.selectStudio': 'Wähle zuerst oben rechts ein Studio-Fenster.', 'err.saveFirst': 'Erst speichern oder verwerfen.', 'err.busy': 'Dieser Clip wird gerade erzeugt. Warte, bis er fertig ist.',
+    'pull.title': 'Aus Studio übernehmen', 'pull.body': 'Animationen unter ServerStorage › RBX_ANIMSAVES, wo der Animation Editor speichert. Die gewählte wird die neueste Fassung dieses Clips.', 'pull.none': 'Keine gespeicherten Animationen gefunden.', 'pull.keys': '{n} Keyframes', 'pull.keys.one': '1 Keyframe',
+    'dialog.cancel': 'Abbrechen', 'dialog.close': 'Schließen', 'dialog.delete': 'Löschen', 'dialog.confirmDelete': '{n} Clip(s) löschen? Sie landen in data/trash und lassen sich von dort wiederherstellen.',
+    'lib.all': 'Alle Clips', 'lib.starred': 'Markiert', 'lib.unsorted': 'Ohne Ordner', 'lib.newFolder': 'Neuer Ordner', 'lib.folderName': 'Ordnername', 'lib.renameFolder': 'Ordner umbenennen', 'lib.deleteFolder': 'Ordner entfernen',
+    'lib.deleteFolderConfirm': 'Ordner „{name}“ entfernen? Die Clips bleiben ohne Ordner in der Bibliothek.',
+    'lib.search': 'Clips durchsuchen', 'lib.new': 'Neuer Clip', 'lib.selected': '{n} ausgewählt', 'lib.open': 'Öffnen', 'lib.moveTo': 'Verschieben nach…', 'lib.toStudio': 'An Studio senden', 'lib.export': '.rbxmx exportieren', 'lib.clear': 'Auswahl aufheben',
+    'lib.col.name': 'Name', 'lib.col.folder': 'Ordner', 'lib.col.length': 'Länge', 'lib.col.model': 'Erzeugt mit', 'lib.col.updated': 'Geändert',
+    'lib.empty': 'Hier ist noch nichts.', 'lib.emptyBody': 'Erzeuge im Editor einen Clip oder vergleiche Modelle mit demselben Prompt.', 'lib.noMatch': 'Keine Clips passen zur Suche.',
+    'cmp.title': 'Modelle vergleichen', 'cmp.body': 'Ein Prompt, mehrere Modelle. Jedes Ergebnis landet als Clip im Ordner „Comparisons“.',
+    'cmp.preset': 'Vorlage', 'cmp.custom': 'Eigener Prompt', 'cmp.prompt': 'Prompt', 'cmp.models': 'Modelle', 'cmp.start': 'Vergleich starten', 'cmp.history': 'Frühere Vergleiche',
+    'cmp.sync': 'Alle Ergebnisse laufen synchron.', 'cmp.empty': 'Noch kein Vergleich.', 'cmp.emptyBody': 'Vorlage wählen, Modelle ankreuzen, starten. Die Ergebnisse erscheinen hier nebeneinander und laufen synchron.',
+    'cmp.running': 'Arbeitet… {s} s', 'cmp.failed': 'Fehlgeschlagen: {error}', 'cmp.interrupted': 'Unterbrochen (Server wurde neu gestartet).', 'cmp.open': 'Im Editor öffnen', 'cmp.frames': 'Einzelbilder', 'cmp.stage': '3D',
+    'cmp.stats': '{s} s · {keys} Keys · {len} s lang', 'cmp.notSetUp': 'nicht eingerichtet',
+    'set.title': 'Einstellungen', 'set.providers': 'KI-Anbieter', 'set.providersBody': 'Nutze vorhandene Abos über ihre Kommandozeilen-Tools oder API-Keys. Keys liegen nur in data/settings.json auf diesem Rechner.',
+    'set.subscription': 'Abo', 'set.api': 'API-Key', 'set.ready': 'Bereit', 'set.notFound': 'Nicht gefunden', 'set.noKey': 'Kein Key', 'set.noUrl': 'Keine Basis-URL', 'set.test': 'Verbindung testen', 'set.save': 'Speichern', 'set.saved': 'Gespeichert',
+    'set.claudeHow': 'Claude Code installieren, dann einmal {cmd} im Terminal ausführen und mit deinem Claude-Abo anmelden.',
+    'set.codexHow': 'Codex CLI installieren, dann einmal {cmd} im Terminal ausführen und mit deinem ChatGPT-Abo anmelden.',
+    'set.anthropicHow': 'Key auf console.anthropic.com erstellen. Anthropic rechnet pro Token ab.', 'set.openaiHow': 'Key auf platform.openai.com erstellen. OpenAI rechnet pro Token ab.',
+    'set.compatibleHow': 'Jede API im Format von OpenAIs Chat Completions: DeepSeek, Qwen, Kimi, GLM, OpenRouter oder lokale Modelle über Ollama oder LM Studio. Basis-URL eintragen (bei den meisten mit /v1 am Ende), einen Key, falls der Server einen braucht, und die Modell-IDs. Abgerechnet wird beim jeweiligen Anbieter.',
+    'set.compatUrl': 'Basis-URL, z. B. https://api.deepseek.com/v1 oder http://localhost:11434/v1', 'set.compatModels': 'Modell-IDs (durch Komma getrennt)',
+    'set.compatMaxTokens': 'Max. Ausgabe-Tokens (optional, z. B. 16000)', 'set.compatImages': 'Die Modelle können Bilder sehen (nötig für die Bildkontrolle)',
+    'set.keyPlaceholder': 'Key einfügen, um den gespeicherten zu ersetzen', 'set.openaiModels': 'Weitere OpenAI-Modell-IDs (durch Komma getrennt)',
+    'set.path': 'Eigener Pfad (optional)', 'set.studio': 'Roblox Studio', 'set.studioBody': 'OpenRig spricht über den in Roblox Studio eingebauten MCP-Server mit Studio. Lass die Place geöffnet; die Verbindung wählst du oben rechts.',
+    'set.studioFound': 'Gefunden: {path}', 'set.studioMissing': 'Studios MCP-Server wurde nicht gefunden. Setze den Pfad zu StudioMCP, falls Studio woanders installiert ist.',
+    'set.rigs': 'Rigs', 'set.rigsBody': 'Körper mit anderen Proportionen als das Standard-R15-Rig, z. B. dein Avatar. Importieren im Editor unter Clip › Rig, während das Rig in Studio ausgewählt ist (Avatar › Rig Builder › My Avatar fügt deinen ein).', 'set.rigsNone': 'Noch keine Rigs importiert.', 'set.rigName': 'Name', 'set.rigDelete': 'Löschen', 'set.rigDeleted': 'Rig gelöscht. Clips dafür zeigen jetzt den Standard-Körper.',
+    'set.style': 'Projektstil', 'set.styleBody': 'Optionale Hinweise für jede Anfrage, z. B. „gemütlich und federnd, nie aggressiv“.', 'set.language': 'Sprache',
+    'time.now': 'gerade eben', 'time.min': 'vor {n} Min.', 'time.hour': 'vor {n} Std.', 'time.day': 'vor {n} T.',
+  },
+};
+
+let lang = 'en';
+try { lang = localStorage.getItem('openrig.lang') || (navigator.language?.startsWith('de') ? 'de' : 'en'); } catch { /* storage blocked */ }
+export const getLang = () => lang;
+export function setLang(next) {
+  lang = STRINGS[next] ? next : 'en';
+  try { localStorage.setItem('openrig.lang', lang); } catch { /* storage blocked */ }
+  document.documentElement.lang = lang;
+}
+// For n = 1 a "<key>.one" string is used when there is one ("1 finding").
+export function t(key, vars = {}) {
+  const one = vars.n === 1 ? STRINGS[lang]?.[`${key}.one`] : null;
+  const s = one ?? STRINGS[lang]?.[key] ?? STRINGS.en[key] ?? key;
+  return s.replace(/\{(\w+)\}/g, (_, k) => (vars[k] ?? `{${k}}`));
+}
+export function ago(iso) {
+  const s = (Date.now() - new Date(iso).getTime()) / 1000;
+  if (s < 60) return t('time.now');
+  if (s < 3600) return t('time.min', { n: Math.round(s / 60) });
+  if (s < 86400) return t('time.hour', { n: Math.round(s / 3600) });
+  return t('time.day', { n: Math.round(s / 86400) });
+}
+document.documentElement.lang = lang;

@@ -1,0 +1,41 @@
+# Roblox
+*.rbxlx
+*.rbxl
+*.rbxm
+*.rbxmx
+
+# Build
+/build/
+/dist/
+/node_modules/
+
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Session state (personal)
+production/session-state/*.txt
+production/session-state/*.json
+
+# Rojo
+/rojo.lock
+
+# Wally
+/Packages/
+/DevPackages/
+/wally.lock
+
+# Aftman
+/aftman.lock
+
+# Build artifacts
+/build.rbxl
+/build.rbxlx

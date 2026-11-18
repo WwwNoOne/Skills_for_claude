@@ -1,0 +1,45 @@
+{
+  "name": "openrig-studio",
+  "version": "0.2.0",
+  "description": "Generate Roblox R15 and R6 animations with the AI you already pay for: Claude Code, Codex CLI or API keys. Preview, compare models, and send clips straight to Roblox Studio.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hildlabs/openrig-studio.git"
+  },
+  "homepage": "https://github.com/hildlabs/openrig-studio#readme",
+  "bugs": {
+    "url": "https://github.com/hildlabs/openrig-studio/issues"
+  },
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node src/server/main.js",
+    "test": "node --test",
+    "lint": "eslint .",
+    "bench": "node scripts/bench.mjs",
+    "save-examples": "node scripts/save-examples.mjs",
+    "build-demo": "node demo/build.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.8.0",
+    "openai": "^7.57.0"
+  },
+  "keywords": [
+    "roblox",
+    "animation",
+    "r15",
+    "keyframes",
+    "claude",
+    "codex",
+    "ai"
+  ],
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.15.0",
+    "globals": "^17.14.0"
+  }
+}
