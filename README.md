@@ -1,8 +1,8 @@
 # Skills for Claude
 
-Almacén personal de **skills** (Claude Code / Agent Skills) para desarrollo de videojuegos en **Roblox**
-y para trabajo general: programación, orquestación de agentes, canales de YouTube y creación de vídeo
-con código.
+Almacén personal de **skills** (Claude Code / Agent Skills, compatibles también con Codex) para
+desarrollo de videojuegos en **Roblox** y para trabajo general: programación, orquestación de agentes,
+canales de YouTube y creación de vídeo con código.
 
 Cada carpeta de primer nivel es una categoría y cada subcarpeta es un skill listo para copiar a
 `~/.claude/skills/` (o a `.claude/skills/` dentro de un proyecto).
@@ -39,20 +39,44 @@ Origen y licencias de cada aportación: **[CREDITOS.md](CREDITOS.md)**
 
 ## Instalación
 
-Un skill = una carpeta con `SKILL.md`. Para instalarlos todos en Claude Code:
+Un skill = una carpeta con `SKILL.md`, formato que comparten Claude Code y Codex.
 
 ```bash
-./instalar.sh            # enlaza cada skill en ~/.claude/skills
-./instalar.sh --copiar   # copia en vez de enlazar
+./instalar.sh             # Claude Code  -> ~/.claude/skills
+./instalar.sh --codex     # Codex        -> ~/.codex/skills
+./instalar.sh --todos     # ambos a la vez
+./instalar.sh --copiar    # copia en vez de enlazar
+./instalar.sh --forzar    # reemplaza lo que ya exista
 ```
 
 O a mano, skill por skill:
 
 ```bash
-cp -r skills/animacion/roblox-animation ~/.claude/skills/
+cp -r skills/animacion/roblox-animation ~/.claude/skills/   # Claude Code
+cp -r skills/animacion/roblox-animation ~/.codex/skills/    # Codex
 ```
 
-Para un proyecto concreto, usa `.claude/skills/` en la raíz del proyecto en lugar de `~/.claude/skills/`.
+Para un proyecto concreto, usa `.claude/skills/` o `.agents/skills/` en la raíz del proyecto en lugar
+de las carpetas globales.
+
+### Claude Code (y Herdr)
+
+Claude Code lee `~/.claude/skills/` y también los skills de plugin. Si lo lanzas desde Herdr no hace
+falta nada especial: Herdr abre el CLI en un panel y este usa la configuración global.
+
+### Codex
+
+Codex 0.150+ soporta el mismo `SKILL.md` de forma nativa. Busca en `$CODEX_HOME/skills`
+(por defecto `~/.codex/skills/`) y en `~/.agents/skills/`. `instalar.sh --codex` enlaza ahí los skills,
+así que se comparten con Claude Code sin copiar nada.
+
+Notas:
+
+- No instales en `~/.codex/skills/` y `~/.agents/skills/` a la vez: Codex deduplica por ruta y verás
+  los skills repetidos en la lista.
+- Codex exige `name` y `description` en el frontmatter; los 110 skills del repo los tienen.
+- Los packs con `CLAUDE.md` (CodePhobiia) siguen funcionando en Codex, pero sus flujos `team-*` y
+  `wiki-*` están escritos para Claude; el resto de skills son independientes del agente.
 
 ### Packs
 
